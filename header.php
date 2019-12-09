@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -50,23 +50,18 @@
                     </div>
                 </div>
                 <nav class="row" data-slide="1">
-                    <ul class="header__nav">
-                        <li>
-                            <a class="header__nav-item" href="#about">About company</a>
-                        </li>
-                        <li>
-                            <a class="header__nav-item" href="#specialists">Our team</a>
-                        </li>
-                        <li>
-                            <a class="header__nav-item" href="#toys">Toys</a>
-                        </li>
-                        <li>
-                            <a class="header__nav-item" href="#aboutus">Our history</a>
-                        </li>
-                        <li>
-                            <a class="header__nav-item" href="#contacts">Contacts and reviews</a>
-                        </li>
-                    </ul>
+
+                <?php 
+                    wp_nav_menu( [
+                        'menu'            => 'Main', 
+                        'container'       => false, 
+                        'menu_class'      => 'header__nav', 
+                        'echo'            => true,
+                        'fallback_cb'     => 'wp_page_menu',
+                        'items_wrap'      => '<ul class="header__nav">%3$s</ul>',
+                        'depth'           => 1
+                    ] );
+                    ?>
                 </nav>
             </div>
             <div class="header__hamburger">
