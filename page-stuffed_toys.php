@@ -16,7 +16,7 @@ Template name: Stuffed Toys
         <?php
             $posts = get_posts( array(
                 'numberposts' => -1,
-                'category_name' => 'stuffed_toys',
+                'category_name' => 'stuffed-toys',
                 'orderby' => 'date',
                 'order' => 'ASC',
                 'post_type' => 'post',

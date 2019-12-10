@@ -25,7 +25,7 @@ get_header();
             <?php
                 $posts = get_posts( array(
                     'numberposts' => 3,
-                    'category_name' => 'stuffed_toys',
+                    'category_name' => 'stuffed-toys',
                     'orderby' => 'date',
                     'order' => 'ASC',
                     'post_type' => 'post',

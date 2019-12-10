@@ -10,13 +10,12 @@ Template name: Toys
 
 <div class="toys">
     <div class="container">
-        <h2 class="subtitle">Stuffed toys</h2>
+        <a class="subtitle" href="<?php echo esc_url( get_permalink( get_page_by_title( 'Stuffed Toys' ) ) ); ?>" >Stuffed toys</a>
         <div class="toys__wrapper">
-
             <?php
                 $posts = get_posts( array(
                     'numberposts' => -1,
-                    'category_name' => 'stuffed_toys',
+                    'category_name' => 'stuffed-toys',
                     'orderby' => 'date',
                     'order' => 'ASC',
                     'post_type' => 'post',
