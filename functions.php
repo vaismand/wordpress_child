@@ -21,12 +21,16 @@ add_filter('nav_menu_link_attributes', 'filter_nav_menu_link_attributes', 10, 3)
 function filter_nav_menu_link_attributes($atts, $item, $args) {
     if ($args->menu === 'Main') {
         $atts['class'] = 'header__nav-item';
-
+		
         if ($item->current) {
             $atts['class'] .= ' header__nav-item-active';
         }
 
+<<<<<<< HEAD
         if ($item->ID === 180 && ( in_category('_toys') || in_category('edu_toys'))) {
+=======
+        if ($item->ID === 180 && ( in_category('stuffed_toys') || in_category('edu_toys'))) {
+>>>>>>> 8919e29e41ddf7f406d21458e90fe3f689ffa751
             $atts['class'] .= ' header__nav-item-active';
         }
     };
