@@ -1,7 +1,7 @@
 <?php
 /*
 Template name: Educational Toys
-Template Post Type: post, edu_toys
+Template Post Type: post, edu-toys
 */
 ?>
 
@@ -32,7 +32,7 @@ get_header();
             <?php
                 $posts = get_posts( array(
                     'numberposts' => 3,
-                    'category_name' => 'edu_toys',
+                    'category_name' => 'edu-toys',
                     'orderby' => 'date',
                     'order' => 'ASC',
                     'post_type' => 'post',

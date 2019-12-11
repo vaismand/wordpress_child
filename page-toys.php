@@ -47,12 +47,12 @@ Template name: Toys
             ?>
         </div>
 
-        <h2 class="subtitle">Educational toys</h2>
+        <a class="subtitle" href="<?php echo esc_url( get_permalink( get_page_by_title( 'Educational toys' ) ) ); ?>" >Educational toys</a>
         <div class="toys__wrapper">
             <?php
                     $posts = get_posts( array(
                         'numberposts' => -1,
-                        'category_name' => 'edu_toys',
+                        'category_name' => 'edu-toys',
                         'orderby' => 'date',
                         'order' => 'ASC',
                         'post_type' => 'post',
